@@ -31,7 +31,7 @@ float densidade_pop2, pib_per_capita2;
    // -----------------------------------------------------------
     // 1. CADASTRO DAS CARTAS (Usando valores fixos para simplificar o teste da lógica)
     // -----------------------------------------------------------
-    printf("--- DADOS DAS CARTAS ---\n");
+   printf("--- DADOS DAS CARTAS ---\n");
     
     // CARTA 1: São Paulo (Dados simulados)
     // Para strings, use a biblioteca <string.h> e a função strcpy
@@ -40,12 +40,13 @@ float densidade_pop2, pib_per_capita2;
    // CARTA 1: São Paulo (Dados simulados)
     // ...
     populacao1 = 12325000;
-    area1 = 1521.11; // <-- Adicione a variável 'area1'
-    pib1 = 699.28;   // <-- Adicione a variável 'pib1'
+    area1 = 1521.11;
+    pib1 = 699.28;
+    
     // CARTA 2: Rio de Janeiro (Dados simulados)
-    populacao2 = 6748000;
-    area2 = 1200.25; // <-- Adicione a variável 'area2'
-    pib2 = 300.50;   // <-- Adicione a variável 'pib2'
+   populacao2 = 6748000;
+   area2 = 1200.25;
+   pib2 = 300.50;
     
     printf("Dados de duas cartas carregados para comparação.\n");
 
@@ -82,16 +83,16 @@ printf("PIB Per Capita 1: R$ %.2f | PIB Per Capita 2: R$ %.2f\n", pib_per_capita
 // -----------------------------------------------------------
 
 printf("\n--- RESULTADO DA RODADA ---\n");
-printf("Atributo: População\n");
+printf("Atributo: Densidade Populacional\n");
 
 // Usa as variáveis populacao1 e populacao2 que você definiu
-if (populacao1 > populacao2) {
-    printf("Resultado: Carta 1 VENCEU! (População: %d)\n", populacao1);
-} else if (populacao2 > populacao1) { // Testa se a CARTA 2 é MAIOR
-    printf("Resultado: Carta 2 VENCEU! (População: %d)\n", populacao2);
-} else { // Se não é maior nem menor, é EMPATE
+if (densidade_pop1 < densidade_pop2) { 
+    printf("Resultado: Carta 1 VENCEU! (Densidade: %.2f)\n", densidade_pop1);
+} else if (densidade_pop2 < densidade_pop1) {
+    printf("Resultado: Carta 2 VENCEU! (Densidade: %.2f)\n", densidade_pop2);
+} else {
     printf("Resultado: EMPATE!\n");
-}  
+}
 
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
